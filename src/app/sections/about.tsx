@@ -6,6 +6,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { SkillsAccordion } from "@/components/SkillsAccordion";
 
 const SKILLS: {
   image: string;
@@ -39,15 +40,15 @@ const SKILLS: {
 
 export const About = () => {
   return (
-    <section id="skills" className="py-20 bg-secondary/5">
+    <section id="about" className="py-16 bg-secondary/5">
       <div className="container px-4 mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12 text-primary">
-          技術スタック
+          My Skills
         </h2>
-        <div className="grid grid-cols-4 md:grid-cols-6  gap-6">
+        <div className="grid grid-cols-4 md:grid-cols-6 gap-6 mb-8">
           {SKILLS.map((skill, index) => (
             <Card
-              className="p-2 border-secondary justify-center items-center bg-background/50 backdrop-blur-sm min-h-[30px]  flex flex-col gap-2"
+              className="p-2 border-secondary justify-center items-center bg-background/50 backdrop-blur-sm min-h-[30px] flex flex-col gap-2"
               key={index}
             >
               <div className="flex items-center justify-center max-h-full h-full">
@@ -72,6 +73,10 @@ export const About = () => {
               </div>
             </Card>
           ))}
+        </div>
+
+        <div className="mb-16">
+          <SkillsAccordion />
         </div>
       </div>
     </section>
