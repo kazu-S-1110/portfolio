@@ -7,6 +7,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { SkillsAccordion } from "@/components/SkillsAccordion";
+import { WhatICherish } from "@/components/WhatICherish";
 
 const SKILLS: {
   image: string;
@@ -45,7 +46,7 @@ export const About = () => {
         <h2 className="text-3xl font-bold text-center mb-12 text-primary">
           My Skills
         </h2>
-        <div className="grid grid-cols-4 md:grid-cols-6 gap-6 mb-8">
+        <div className="grid grid-cols-4 md:grid-cols-6 gap-6 mb-8 max-w-2xl mx-auto">
           {SKILLS.map((skill, index) => (
             <Card
               className="p-2 border-secondary justify-center items-center bg-background/50 backdrop-blur-sm min-h-[30px] flex flex-col gap-2"
@@ -78,6 +79,8 @@ export const About = () => {
         <div className="mb-16">
           <SkillsAccordion />
         </div>
+
+        <WhatICherish />
       </div>
     </section>
   );
