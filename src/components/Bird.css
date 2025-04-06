@@ -1,0 +1,105 @@
+/* シマエナガのスタイル */
+.bird {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.bird .body {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  top: 30px;
+  left: 30px;
+}
+
+.bird .head {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  top: 10px;
+  left: 40px;
+}
+
+.bird .beak {
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  background-color: #ff9800;
+  border-radius: 5px;
+  top: 30px;
+  left: 65px;
+  transform: rotate(-10deg);
+}
+
+.bird .eye {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  border-radius: 50%;
+  top: 25px;
+  left: 55px;
+}
+
+.bird .tail {
+  position: absolute;
+  width: 70px;
+  height: 25px;
+  background-color: white;
+  border-radius: 10px;
+  top: 60px;
+  left: 10px;
+  transform: rotate(20deg);
+  transform-origin: right center;
+  animation: tailWag 2s ease-in-out infinite;
+}
+
+.bird .wing {
+  position: absolute;
+  width: 30px;
+  height: 40px;
+  background-color: #f0f0f0;
+  border-radius: 50% 50% 50% 10%;
+  top: 40px;
+  left: 25px;
+  transform: rotate(-15deg);
+  transform-origin: top right;
+  animation: wingFlap 2s ease-in-out infinite;
+}
+
+/* アニメーション */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes tailWag {
+  0%,
+  100% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes wingFlap {
+  0%,
+  100% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+}
