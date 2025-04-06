@@ -13,7 +13,7 @@ export const Hero = () => {
 
         <h1 className="text-3xl md:text-4xl font-bold  text-white">Kazu-S</h1>
         <p className="text-xl md:text-2xl text-gray-300">
-          フロントエンドメインのWebエンジニア
+          フロントエンドメインのWebエンジニャ
         </p>
 
         {/* TODO: シマエナガをcssで表現 */}
