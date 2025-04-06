@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Avatar from "../../components/Avatar";
 
-export const HeroSection = () => {
+export const Hero = () => {
   return (
     <section className="relative h-screen flex items-center justify-center">
       <Image

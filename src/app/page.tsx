@@ -1,11 +1,11 @@
-import { HeroSection } from "./sections/hero-section";
-import { SkillsSection } from "./sections/skills-section";
+import { Hero } from "./sections/hero";
+import { About } from "./sections/about";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
-      <HeroSection />
-      <SkillsSection />
+      <Hero />
+      <About />
     </main>
   );
 }
