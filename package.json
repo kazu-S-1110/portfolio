@@ -6,7 +6,19 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:precommit": "eslint 'src/**/*.{ts,tsx}' --max-warnings 0",
+    "fmt:precommit": "prettier -l './**/*.{js,jsx,ts,tsx,json,css,scss}'",
+    "prepare": "husky"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": "npm run lint:precommit",
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss}": "npm run fmt:precommit"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
@@ -26,6 +38,9 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "prettier": "^3.5.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
