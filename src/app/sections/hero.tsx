@@ -1,11 +1,11 @@
 import React from "react";
 import Bird from "../../components/Bird";
-import { SnowAnimation } from "../../components/SnowAnimation";
+import { SnowCanvas } from "../../components/snowCanvas/SnowCanvas";
 
 export const Hero = () => {
   return (
     <section className="relative h-screen flex items-center justify-center snowy-bg overflow-hidden">
-      <SnowAnimation />
+      <SnowCanvas />
 
       <div className="container px-4 mx-auto text-center relative z-10">
         <h1 className="text-3xl md:text-4xl font-bold mb-6 text-white">
