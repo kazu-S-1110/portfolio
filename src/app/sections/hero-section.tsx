@@ -20,14 +20,14 @@ export const HeroSection = () => {
             size={150}
           />
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold mb-2 bg-gradient-to-r from-pink-500 to-blue-500 text-transparent bg-clip-text">
+        <h1 className="text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-pink-500 to-blue-500 text-transparent bg-clip-text">
           Kazu-S
         </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+        <p className="text-xl md:text-xl text-muted-foreground mb-2">
           フロントエンドメインのエンジニャ
         </p>
 
-        <p className="text-md md:text-sm text-muted-foreground">
+        <p className="text-md text-muted-foreground">
           そら、もうだんだん早くなって、黒い川の水にあたるかと言いました。いまぼくたちのからだだって考えだって、ただそう感じているの。第一かけるにして水の中からでもはいって来るらしいのでした。琴の星がずうっと西の方へ行っておじぎをしました。
         </p>
       </div>
