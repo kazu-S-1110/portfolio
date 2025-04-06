@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:precommit": "eslint 'src/**/*.{ts,tsx}' --max-warnings 0",
-    "fmt:precommit": "prettier -l './**/*.{js,jsx,ts,tsx,json,css,scss}'",
+    "lint:precommit": "eslint 'src/**/*.{ts,tsx}' --max-warnings 0 --fix",
+    "fmt:precommit": "prettier --write './**/*.{js,jsx,ts,tsx,json,css,scss}'",
     "prepare": "husky"
   },
   "husky": {
@@ -17,10 +17,16 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx}": "npm run lint:precommit",
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss}": "npm run fmt:precommit"
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{json,css,scss,md}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.1.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.487.0",
