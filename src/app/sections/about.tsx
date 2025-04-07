@@ -41,15 +41,15 @@ const SKILLS: {
 
 export const About = () => {
   return (
-    <section id="about" className="py-16 bg-secondary/5">
+    <section id="about" className="py-16 relative z-10">
       <div className="container px-4 mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12 text-primary">
+        <h2 className="text-3xl font-bold text-center mb-12 text-white">
           My Skills
         </h2>
         <div className="grid grid-cols-4 md:grid-cols-6 gap-6 mb-8 max-w-2xl mx-auto">
           {SKILLS.map((skill, index) => (
             <Card
-              className="p-2 border-secondary justify-center items-center bg-background/50 backdrop-blur-sm min-h-[30px] flex flex-col gap-2"
+              className="p-2 border-secondary/20 justify-center items-center bg-background/30 backdrop-blur-sm min-h-[30px] flex flex-col gap-2"
               key={index}
             >
               <div className="flex items-center justify-center max-h-full h-full">
@@ -76,11 +76,13 @@ export const About = () => {
           ))}
         </div>
 
-        <div className="mb-16">
+        <div className="mb-16 text-white">
           <SkillsAccordion />
         </div>
 
-        <WhatICherish />
+        <div className="text-white">
+          <WhatICherish />
+        </div>
       </div>
     </section>
   );

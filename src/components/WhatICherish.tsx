@@ -45,18 +45,18 @@ const VALUES = [
 export const WhatICherish = () => {
   return (
     <div className="mt-12">
-      <h3 className="text-3xl font-bold text-center mb-8 text-primary">
+      <h3 className="text-3xl font-bold text-center mb-8 text-white">
         大事にしていること
       </h3>
-      <div className="max-w-2xl mx-auto">
-        <Accordion type="multiple" className="w-full">
+      <div className="max-w-2xl mx-auto backdrop-blur-sm">
+        <Accordion type="single" collapsible className="w-full">
           {VALUES.map((value, idx) => (
             <AccordionItem key={idx} value={idx.toString()}>
-              <AccordionTrigger className="text-primary">
+              <AccordionTrigger className="text-white">
                 {value.title}
               </AccordionTrigger>
               <AccordionContent>
-                <p className="text-muted-foreground">{value.content}</p>
+                <p className="text-white">{value.content}</p>
               </AccordionContent>
             </AccordionItem>
           ))}
