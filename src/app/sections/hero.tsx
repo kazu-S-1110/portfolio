@@ -3,6 +3,7 @@ import { SnowCanvas } from "../../components/snowCanvas/SnowCanvas";
 import Avatar from "@/components/Avatar";
 import { Bio } from "@/components/Bio";
 import { Github, Twitter } from "lucide-react";
+import { AboutLink } from "@/components/AboutLink";
 
 export const Hero = () => {
   return (
@@ -45,6 +46,10 @@ export const Hero = () => {
           >
             <Twitter size={24} />
           </a>
+        </div>
+
+        <div className="mt-4">
+          <AboutLink />
         </div>
       </div>
     </section>
